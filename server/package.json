@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "node index.js",
     "start": "node index.js",
-    "postinstall": "cd ../client && npm install && npm run build",
     "yt-dlp-test": "yt-dlp --cookies ./cookies.txt https://www.youtube.com/watch?v=lK8BV17CJhw"
   },
   "dependencies": {

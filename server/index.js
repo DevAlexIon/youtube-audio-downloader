@@ -15,7 +15,7 @@ if (!fs.existsSync(downloadsPath)) {
 app.use(cors());
 app.use(express.json());
 
-const clientBuildPath = path.join(__dirname, "..", "client", "dist");
+const clientBuildPath = path.join(__dirname, "public");
 app.use(express.static(clientBuildPath));
 
 app.post("/api/download", async (req, res) => {

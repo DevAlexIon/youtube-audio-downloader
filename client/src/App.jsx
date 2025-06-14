@@ -11,14 +11,11 @@ function App() {
     setError(null);
 
     try {
-      const response = await fetch(
-        "https://youtube-audio-downloader-7f3r.onrender.com/api/download",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ url }),
-        }
-      );
+      const response = await fetch("http://localhost:5001/api/download", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ url }),
+      });
 
       if (!response.ok) {
         const data = await response.json();
